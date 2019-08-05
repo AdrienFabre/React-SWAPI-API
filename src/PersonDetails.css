@@ -1,0 +1,27 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4%;
+  font-size: 75%;
+  font-family: "Courier New", Courier, monospace;
+}
+
+button {
+  background-color: #f4e61e;
+  border: none;
+  color: black;
+  padding: 8px 12px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.7;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  opacity: 1;
+}

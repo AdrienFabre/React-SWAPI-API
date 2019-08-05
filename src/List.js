@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PersonDetails from "./PersonDetails";
 
 class List extends Component {
   render() {
@@ -10,6 +11,7 @@ class List extends Component {
           return (
             <div key={person.created}>
               <h5 className="name">{person.name}</h5>
+              <PersonDetails personDetails={person} />
             </div>
           );
         })}

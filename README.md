@@ -1,7 +1,7 @@
 
 # React Swapi API
 
-This programme enables you to search for 'People' fron the Star Wars movies and get their details.
+This programme enables you to search for 'People' from the Star Wars movies and get their details.
 
 ## Screenshot
 

@@ -4,11 +4,9 @@ import "./PersonDetails.css";
 class PersonDetails extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       expanded: false
     };
-
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -23,13 +21,31 @@ class PersonDetails extends Component {
     } else {
       return (
         <div>
-          <div class="grid">
-            <div>Gender: {personDetails.gender}</div>
-            <div>Eye: {personDetails.eye_color}</div>
-            <div>Height: {personDetails.height}</div>
-            <div>Birth: {personDetails.birth_year}</div>
-            <div>Hair: {personDetails.hair_color}</div>
-            <div>Weight: {personDetails.mass}</div>
+          <div className="grid">
+            <div>
+              Gender: <br />
+              {personDetails.gender}
+            </div>
+            <div>
+              Eye: <br />
+              {personDetails.eye_color}
+            </div>
+            <div>
+              Height: <br />
+              {personDetails.height}
+            </div>
+            <div>
+              Birth: <br />
+              {personDetails.birth_year}
+            </div>
+            <div>
+              Hair: <br />
+              {personDetails.hair_color}
+            </div>
+            <div>
+              Weight: <br />
+              {personDetails.mass}
+            </div>
           </div>
           <button onClick={this.handleClick}>Hide details</button>
         </div>

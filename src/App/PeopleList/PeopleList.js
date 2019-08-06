@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import PersonDetails from "./PersonDetails";
+import PersonDetails from "../PersonDetails/PersonDetails";
 
 class List extends Component {
   render() {
-    const people = this.props.people;
+    let peopleToDisplay = this.props.peopleToDisplay;
     return (
-      <div>
-        {people.map(person => {
-          console.log(person);
+      <div className="listWrapper">
+        {peopleToDisplay.map(person => {
           return (
-            <div key={person.created}>
+            <div className="person" key={person.created}>
               <h5 className="name">{person.name}</h5>
               <PersonDetails personDetails={person} />
             </div>

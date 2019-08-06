@@ -1,16 +1,20 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 4%;
+  column-gap: 15%;
+  row-gap: 15%;
   font-size: 75%;
-  font-family: "Courier New", Courier, monospace;
+  font-family: inherit;
+  top: 0%;
+  margin-bottom: 20px;
+  margin-top: -20px;
 }
 
 button {
   background-color: #f4e61e;
   border: none;
   color: black;
-  padding: 8px 12px;
+  padding: 6px 10px;
   text-align: center;
   font-size: 16px;
   margin: 4px 2px;

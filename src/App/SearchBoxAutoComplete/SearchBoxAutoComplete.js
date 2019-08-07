@@ -2,8 +2,8 @@ import React from "react";
 import "./SearchBoxAutoComplete.css";
 
 class AutoComplete extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       suggestions: [],
       text: ""
@@ -40,7 +40,6 @@ class AutoComplete extends React.Component {
         <input
           maxLength={15}
           className="searchBox"
-          value={text}
           onChange={this.onTextChanged}
           type="text"
         />

@@ -8,29 +8,27 @@ import "./App.css";
 class App extends Component {
   state = { peopleToDisplay: [], peopleData: [], peopleNames: [] };
 
-  getPeopleData() {
-    return axios.get("https://swapi.co/api/people").then(response => {
-      this.setState({
-        peopleData: response.data.results,
-        peopleNames: response.data.results.map(person => person.name)
-      });
-      console.log(response.status);
+  getPeopleData = async () => {
+    const response = await axios.get("https://swapi.co/api/people");
+    this.setState({
+      peopleData: response.data.results,
+      peopleNames: response.data.results.map(person => person.name)
     });
-  }
+  };
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.getPeopleData();
-  }
+  };
 
   updatePeopleToDisplay = suggestions => {
     this.setState({ peopleToDisplay: suggestions });
   };
 
-  retrieveData() {
+  retrieveData = () => {
     return this.state.peopleData
       .filter(person => this.state.peopleToDisplay.includes(person.name))
       .map(person => person);
-  }
+  };
 
   render() {
     return (

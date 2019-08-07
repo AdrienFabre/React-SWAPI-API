@@ -2,17 +2,16 @@ import React, { Component } from "react";
 import "./PersonDetails.css";
 
 class PersonDetails extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       expanded: false
     };
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  handleClick = () => {
     this.setState({ expanded: !this.state.expanded });
-  }
+  };
 
   render() {
     const personDetails = this.props.personDetails;
@@ -23,27 +22,27 @@ class PersonDetails extends Component {
         <div>
           <div className="grid">
             <div>
-              Gender: <br />
+              Gender <br />
               {personDetails.gender}
             </div>
             <div>
-              Eye: <br />
+              Eye <br />
               {personDetails.eye_color}
             </div>
             <div>
-              Height: <br />
+              Height <br />
               {personDetails.height}
             </div>
             <div>
-              Birth: <br />
+              Birth <br />
               {personDetails.birth_year}
             </div>
             <div>
-              Hair: <br />
+              Hair <br />
               {personDetails.hair_color}
             </div>
             <div>
-              Weight: <br />
+              Weight <br />
               {personDetails.mass}
             </div>
           </div>

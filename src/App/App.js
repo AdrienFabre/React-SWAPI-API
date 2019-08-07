@@ -14,6 +14,7 @@ class App extends Component {
         peopleData: response.data.results,
         peopleNames: response.data.results.map(person => person.name)
       });
+      console.log(response.status);
     });
   }
 

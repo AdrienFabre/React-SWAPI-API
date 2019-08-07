@@ -25,7 +25,9 @@ class AutoComplete extends React.Component {
     const { text } = this.state;
 
     let message = "";
-    if (!text.length) {
+    if (!this.props.peopleNames.length) {
+      message = "Loading...";
+    } else if (!text.length) {
       message = "Search a character!";
     } else if (text.length > 14) {
       message = "Maximum length reached!";

@@ -21,6 +21,12 @@ React
 
 ES6+
 
+## To install
+
+```bash
+npm install
+```
+
 ## To run
 
 ```bash
